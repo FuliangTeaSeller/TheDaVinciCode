@@ -1,5 +1,7 @@
 #pragma once
 #include<string>
+#include <functional>
+#include<set>
 enum cardColor
 {
 	BLACK, WHITE
@@ -12,14 +14,17 @@ private:
 	cardColor color;
 	bool swiched = false;
 public:
+	std::set<int> guessList;
 	cardColor getcolor()const { return color; }
 	int getnumber()const { return number; }
 	int getvalue()const { return value; }
+	bool getswiched()const { return swiched; }
+	void setswiched(bool flag) { swiched = flag; }
 	Card(int number, cardColor color);
 	Card(int value);
-	Card() :value(-10) {}
-	std::string stringColor();
-	//~Card();
+	//Card() = default;
+	std::string stringColor()const;
 	const bool operator<(const Card& card)const;
+	const bool operator==(const Card& card)const;
 };
 

@@ -11,6 +11,7 @@ public:
 	std::vector<Card>deck;
 	std::vector<std::queue<Card*>>cardsToDealt;
 	Deck();
+	bool isEmpty();
 private:
 	void shuffleSequence();
 };

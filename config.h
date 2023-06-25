@@ -10,6 +10,7 @@ const int WINDOW_HEIGHT = 600;
 const int MAX_PLAYERS = 2;
 const int MAX_CARD_NUM = 12;
 const bool JOCKER = false;
+const int LATEST_CARD_MAGICNUM = -10;
 enum class Difficulty
 {
 	EASY,NORMAL,HARD

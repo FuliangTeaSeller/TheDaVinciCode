@@ -1,8 +1,11 @@
 ﻿#include"Game.h"
 int main()
 {
-	Game game;
-	game.init();
-	game.run();
+	while (true) {
+		Game game;
+		game.init();
+		game.run();
+		game.end();
+	}
 	return 0;
 }
